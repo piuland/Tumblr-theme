@@ -62,6 +62,13 @@
 <meta property="og:title" content="{PlaintextTitle}" />
 <meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
 <meta property="og:image" content="{PortraitURL-128}" />
+
+<! --  {Alt} is used to add a class of “odd” or “even”, depending if the line number is odd/even. -->
+<div class="chat">
+    <ul>
+        {block:Lines}<li class="{Alt}">{block:Label} {Label} {/block:Label}{Line}</li>{/block:Lines}
+    </ul>
+</div>
 {/block:Chat}
 <! -- Probando -->
 
