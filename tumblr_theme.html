@@ -63,6 +63,7 @@
 <meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
 <meta property="og:image" content="{PortraitURL-128}" />
 {/block:Chat}
+<! -- Probando -->
 
 {block:Audio}
 <meta property="og:title" content="{block:Artist}{Artist} - {/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}" />
@@ -113,12 +114,16 @@
 <meta name="twitter:description" content="{PlaintextDescription}" />
 {block:Thumbnail}<meta name="twitter:image" content="{Thumbnail}" />{/block:Thumbnail}
 {/block:Link}
+
+<! -- Aquí también va a haber que tocar -->
 {block:Chat}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{PlaintextTitle}" />
 <meta name="twitter:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}" />
 <meta name="twitter:image" content="{PortraitURL-128}" />
 {/block:Chat}
+<! -- Probando -->
+
 {block:Audio}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{block:Artist}{Artist} - {/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}" />
@@ -330,11 +335,11 @@
                             #main article.link header h2,
                             #main article.link header .source { margin: 15px 0; }
                         /* Chat */
-                            #main article.chat .post-content { font-family: Courier, sans-serif; }
+                        /*    #main article.chat .post-content { font-family: Courier, sans-serif; }
                             #main article.chat .post-content ul { padding: 0; margin: 0; list-style: none; }
                             #main article.chat .post-content ul .user { font-weight: bold; }
                             #main article.chat .post-content ul li { padding: 10px 15px; }
-                            #main article.chat .post-content ul li.odd { background-color: {color:Text Color}; color: {color:Boxes Color}; }
+                            #main article.chat .post-content ul li.odd { background-color: {color:Text Color}; color: {color:Boxes Color}; }*/
                         /* Audio */
                             #main article.audio header .spotify_audio_player { height: 80px; width: 100%; position: initial; }
                             #main article.audio header .tumblr_audio_player { height: 170px; width: 100%; }
