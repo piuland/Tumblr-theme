@@ -20,6 +20,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta property="og:site_name" content="{Title}" />
+
 {block:IndexPage}
 <meta property="og:title" content="{block:TagPage}&quot;{PlaintextTag}&quot; - {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{Title}" />
 <meta property="og:url" content="{blogURL}{block:TagPage}tagged/{URLSafeTag}{/block:TagPage}" />
@@ -27,30 +28,42 @@
 <meta property="og:description" content="{MetaDescription} {block:TagPage}{PlaintextDescription}{/block:TagPage}" />
 <meta property="og:image" content="{PortraitURL-128}" />
 {/block:IndexPage}
+
 {block:PermalinkPage}
 <meta property="og:url" content="{Permalink}" />
 <meta property="og:type" content="article" />
+
 {block:Posts}
+
 {block:Text}
 {block:Title}<meta property="og:title" content="{PlaintextTitle}" />{/block:Title}
 <meta property="og:description" content="{PlaintextBody}" />
 <meta property="og:image" content="{PortraitURL-128}" />
 {/block:Text}
+
 {block:Photo}
 <meta property="og:image" content="{PhotoURL-HighRes}" />
 {block:Caption}<meta property="og:description" content="{PlaintextCaption}" />{/block:Caption}
 {/block:Photo}
+
 {block:Photoset}
+
 {block:Photos}
 <meta property="og:image" content="{PhotoURL-HighRes}" />
 {/block:Photos}
-{block:Caption}<meta property="og:description" content="{PlaintextCaption}" />{/block:Caption}
+
+{block:Caption}
+<meta property="og:description" content="{PlaintextCaption}" />
+{/block:Caption}
+
 {/block:Photoset}
+
 {block:Quote}
 <meta property="og:title" content="{PlaintextQuote}" />
 <meta property="og:description" content="{PlaintextSource}" />
 <meta property="og:image" content="{PortraitURL-128}" />
 {/block:Quote}
+
 {block:Link}
 <meta property="og:title" content="{PlaintextName}" />
 <meta property="og:description" content="{PlaintextDescription}" />
@@ -77,44 +90,54 @@
 <meta property="og:description" content="{PlaintextCaption}" />
 {block:AlbumArt}<meta property="og:image" content="{AlbumArtURL}" />{/block:AlbumArt}
 {/block:Audio}
+
 {block:Video}
 {block:Caption}<meta property="og:description" content="{PlaintextCaption}" />{/block:Caption}
 {block:VideoThumbnail}<meta property="og:image" content="{VideoThumbnailURL}" />{/block:VideoThumbnail}
 {/block:Video}
+
 {block:Answer}
 <meta property="og:title" content="{PlaintextQuestion}" />
 <meta property="og:description" content="{PlaintextAnswer}" />
 <meta property="og:image" content="{PortraitURL-128}" />
 {/block:Answer}
+
 {/block:Posts}
+
 {/block:PermalinkPage}
 
 {block:PermalinkPage}
 <meta name="twitter:url" content="{Permalink}" />
 <meta name="twitter:site" content="@username">
+    
 {block:Posts}
+
 {block:Text}
 <meta name="twitter:card" content="summary">
 {block:Title}<meta name="twitter:title" content="{PlaintextTitle}" />{/block:Title}
 <meta name="twitter:description" content="{PlaintextBody}" />
 <meta name="twitter:image" content="{PortraitURL-128}" />
 {/block:Text}
+
 {block:Photo}
 <meta name="twitter:card" content="photo">
 <meta name="twitter:image" content="{PhotoURL-500}" />
 {block:Caption}<meta name="twitter:description" content="{PlaintextCaption}" />{/block:Caption}
 {/block:Photo}
+
 {block:Photoset}
 <meta name="twitter:card" content="photo">
 {block:Photos}<meta name="twitter:image" content="{PhotoURL-500}" />{/block:Photos}
 {block:Caption}<meta name="twitter:description" content="{PlaintextCaption}" />{/block:Caption}
 {/block:Photoset}
+
 {block:Quote}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{PlaintextQuote}" />
 <meta name="twitter:description" content="{PlaintextSource}" />
 <meta name="twitter:image" content="{PortraitURL-128}" />
 {/block:Quote}
+
 {block:Link}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{PlaintextName}" />
@@ -136,20 +159,24 @@
 <meta name="twitter:title" content="{block:Artist}{Artist} - {/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}" />
 <meta name="twitter:description" content="{PlaintextCaption}" />
 {block:AlbumArt}<meta name="twitter:image" content="{AlbumArtURL}" />{/block:AlbumArt}
- {/block:Audio}
+{/block:Audio}
+ 
 {block:Video}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{PlaintextTitle}" />
 {block:Caption}<meta name="twitter:description" content="{PlaintextCaption}" />{/block:Caption}
 {block:VideoThumbnail}<meta name="twitter:image" content="{VideoThumbnailURL}" />{/block:VideoThumbnail}
 {/block:Video}
+
 {block:Answer}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{PlaintextQuestion}" />
 <meta name="twitter:description" content="{PlaintextAnswer}" />
 <meta name="twitter:image" content="{PortraitURL-128}" />
 {/block:Answer}
+
 {/block:Posts}
+
 {/block:PermalinkPage}
 
 <meta name="msapplication-TileImage" content="{PortraitURL-128}">
