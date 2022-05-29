@@ -295,9 +295,18 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <link href='//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+<!-- Aquí empieza el código CSS: hoja de estilo -->
 <style>
             /* General */
-                body, html { background-color: {color:Footer Background}; color: {color:Text Color}; font-size: 16px; font-family: {font:Text Font}; line-height: 1.8; }
+                body,
+                html {
+                    background-color: {color:Footer Background};
+                    color: {color:Text Color};
+                    font-size: 16px;
+                    font-family: {font:Text Font};
+                    line-height: 1.8;
+                }
                 a,
                 a:visited { color: {color:Link Color}; }
                 a:hover,
@@ -307,6 +316,7 @@
                 iframe { max-width: 100%; }
                 img { max-width: 100%; height: auto; }
                 .container { max-width: {select:Blog Width}; }
+                
                 /* Header */
                     /* Navbar */
                         #header #navbar { background-color: {color:Boxes Color}; min-height: 90px; }
@@ -315,7 +325,6 @@
                         #header #navbar a,
                         #header #navbar a:visited,
                         #header #navbar a:hover { color: {color:Text Color}; }
-                        
                         #header .navbar .navbar-default { background-color: transparent; border-color: transparent; font-weight: bold; }
                         #header .navbar .navbar-nav { float: none; }
                         #header .navbar .navbar-nav > li { display: inline-block; float: none; }
@@ -344,7 +353,14 @@
                         #header .navbar .dropdown.open ul li a:focus { background-color: rgba(0,0,0,0,0.05); }
                         #header .navbar .dropdown-menu {   -webkit-box-shadow: 0 4px 9px rgba(0,0,0,.1); box-shadow: 0 4px 9px rgba(0,0,0,.1); }
                 /* Main */
-                    #main { background-color: {color:Background Color}; padding: 50px 0 0; {block:IfBackgroundImageImage}background-repeat: no-repeat; background-image: url('{image:Background Image}'); {select:Background Type} {select:Background Position}{/block:IfBackgroundImageImage} }
+                    #main {
+                        background-color: {color:Background Color};
+                        padding: 50px 0 0;
+                        {block:IfBackgroundImageImage}background-repeat: no-repeat;
+                        background-image: url('{image:Background Image}');
+                        {select:Background Type}
+                        {select:Background Position}
+                    {/block:IfBackgroundImageImage} }
 
                     /* Blog Info */
                         #main .blog-info { position: relative; margin: 50px 0; min-height: 64px; }
@@ -359,7 +375,13 @@
                         /* Avatar */
                             #main .blog-info .avatar { background-image: url('{PortraitURL-128}'); width: 128px; height: 128px; position: absolute; top: -64px; left: 50%; margin-left: -64px; border-radius: 50%; z-index: 99; }
                     /* Posts */
-                        #main article { background-color: {color:Boxes Color}; padding: 0 50px; margin-bottom: 50px; position: relative; overflow: auto; }
+                        #main article {
+                            background-color: {color:Boxes Color};
+                            padding: 0 50px;
+                            margin-bottom: 50px;
+                            position: relative;
+                            overflow: auto;
+                        }
                         #main article img { margin: 0 auto; }
                         #main article header { margin: 50px 0; color: {color:Text Color}; font-family: 'Roboto', sans-serif; }
                         #main article .post-content { margin: 50px 0; color: {color:Text Color}; }
@@ -395,11 +417,11 @@
                             #main article.link header h2,
                             #main article.link header .source { margin: 15px 0; }
                         /* Chat */
-                        /*  #main article.chat .post-content { font-family: Courier, sans-serif; }
+                            #main article.chat .post-content { font-family: Courier, sans-serif; }
                             #main article.chat .post-content ul { padding: 0; margin: 0; list-style: none; }
                             #main article.chat .post-content ul .user { font-weight: bold; }
                             #main article.chat .post-content ul li { padding: 10px 15px; }
-                            #main article.chat .post-content ul li.odd { background-color: {color:Text Color}; color: {color:Boxes Color}; } */
+                            #main article.chat .post-content ul li.odd { background-color: {color:Text Color}; color: {color:Boxes Color}; }
                             /* my code*/
                             #main article.chat .post-content ul { list-style: none; margin: 0; padding: 0; }
                             #main article.chat .post-content li {
