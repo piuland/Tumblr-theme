@@ -4,7 +4,14 @@
 <head>
 
 <meta charset="utf-8">
- 
+    
+<link href="https://mastodon.madrid/@omysailor" rel=me>
+
+<link href="https://theme-hunter.tumblr.com/post/45018620458/making-tumblr-theme-chats-look-like-phone-messages" rel=phone_messages>
+
+<link href="https://www.tumblr.com/docs/es/custom_themes" rel=tumblr_doc>
+
+<link href="https://freyayuki.tumblr.com/post/128262588172/tumblr-tutorial-fix-chat-post-blog-homepage" rel=more_doc>
 
 {block:Description}
 <meta name="description" content="{MetaDescription}">
@@ -291,13 +298,10 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <link href='//fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+
     
 <link rel="stylesheet" href="tumblrtheme_style.css">
-       
-<link href="https://mastodon.madrid/@omysailor" rel=me>
-<link href="https://theme-hunter.tumblr.com/post/45018620458/making-tumblr-theme-chats-look-like-phone-messages" rel=phone_messages>
-<link href="https://www.tumblr.com/docs/es/custom_themes" rel=tumblr_doc>
-<link href="https://freyayuki.tumblr.com/post/128262588172/tumblr-tutorial-fix-chat-post-blog-homepage" rel=more_doc>
     
 </head>
 <body>
