@@ -297,7 +297,15 @@
             /* Custom CSS */
                 {CustomCSS}
                 /* my code*/
-                #main article.chat .post-content ul { list-style: none; margin: 0; padding: 0; }
+                #main article.chat .post-content ul {
+                    list-style: none;
+                    margin: 20px;
+                    padding: 0;
+                    /* adding boxmodel attributes */
+                    width: 0px;
+                    border: 15px white;
+                    padding: 10px;
+                }
                 #main article.chat .post-content li {
                     border-radius: 0.2em;
                     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -314,5 +322,6 @@
                     float: right;
                     background: rgb(166, 230, 255);
                 }
+
                 /* end of my code*/
         </style>
