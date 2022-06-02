@@ -536,117 +536,120 @@
 
 {/block:Chat}
 {block:Audio}
-<header>
-<div class="player">
-{AudioEmbed}
-</div>
-</header>
+    <header>
+        <div class="player">
+            {AudioEmbed}
+        </div>
+    </header>
 {block:Caption}
-<div class="post-content">
-<div class="caption">
-{Caption}
-</div>
-</div>
+    <div class="post-content">
+        <div class="caption">
+            {Caption}
+        </div>
+    </div>
 {/block:Caption}
 {/block:Audio}
-{block:Video} 
-<header>
-<div class="video">
-{Video-700}
-</div>
-</header>
-{block:Caption}
-<div class="post-content">
-<div class="caption">
-{Caption}
-</div>
-</div>
-{/block:Caption}
+
+{block:Video}
+    <header>
+        <div class="video">
+            {Video-700}
+        </div>
+    </header>
+    {block:Caption}
+        <div class="post-content">
+            <div class="caption">
+                {Caption}
+            </div>
+        </div>
+    {/block:Caption}
 {/block:Video}
-{block:Answer} 
-<header>
-<div class="question">
-<img class="avatar radius" src="{AskerPortraitURL-128}" alt="Avatar" />
-<div class="text radius">
-<div class="wrapper">
-<span class="user">{Asker}:</span> {Question}
-</div>
-</div>
-</div>
-{block:Answerer}
-<div class="answer">
-<img class="avatar radius" src="{AnswererPortraitURL-128}" alt="Avatar" />
-<div class="text radius">
-<div class="wrapper">
-<span class="user">{Answerer}: </span> {Answer}
-</div>
-</div>
-</div>
-{/block:Answerer}
-</header>
-<div class="post-content">
-<div class="replies">{Replies}</div>
-</div>
+
+{block:Answer}
+    <header>
+        <div class="question">
+            <img class="avatar radius" src="{AskerPortraitURL-128}" alt="Avatar" />
+            <div class="text radius">
+                <div class="wrapper">
+                    <span class="user">{Asker}:</span> {Question}
+                </div>
+            </div>
+        </div>
+    {block:Answerer}
+        <div class="answer">
+            <img class="avatar radius" src="{AnswererPortraitURL-128}" alt="Avatar" />
+            <div class="text radius">
+                <div class="wrapper">
+                    <span class="user">{Answerer}: </span> {Answer}
+                </div>
+            </div>
+        </div>
+    {/block:Answerer}
+    </header>
+    <div class="post-content">
+        <div class="replies">{Replies}</div>
+    </div>
 {/block:Answer}
+
 {block:Date}
-<footer>
-<ul class="clearfix">
-<li class="reblog">
-{ReblogButton size="14"}
-</li>
-<li class="like">
-<svg width="14" height="14" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-<path d="M14.0425097,0.000920262799 C16.1435097,-0.0400797372 18.8835097,1.28192026 18.9635097,5.36992026 C19.0525097,9.95492026 15.1985097,13.3079203 9.48350967,16.2089203 C3.76650967,13.3079203 -0.0874903349,9.95492026 0.00150966509,5.36992026 C0.0815096651,1.28192026 2.82150967,-0.0400797372 4.92250967,0.000920262799 C7.02450967,0.0419202628 8.87050967,2.26592026 9.46950967,2.92792026 C10.0945097,2.26592026 11.9405097,0.0419202628 14.0425097,0.000920262799 Z"></path>
-</svg>
-{LikeButton size="14"}
-</li>
-<li class="pull-right">
-<ul>
-<li class="date">
-<a href="{Permalink}">{TimeAgo}</a>{block:NoteCount},{/block:NoteCount}
-</li>
-{block:NoteCount}
-<li class="notes">
-{NoteCountWithLabel}
-</li>
-{/block:NoteCount}
-{block:ContentSource}
-<li class="source">
-(<a href="{SourceURL}">{lang:Source}</a>)
-</li>
-{/block:ContentSource}
-{block:RebloggedFrom}
-<li class="reblogged">
-{lang:Via} <a href="{ReblogParentURL}" target="_blank">{ReblogParentName}</a>
-</li>
-{/block:RebloggedFrom}
-</ul>
-</li>
-{block:HasTags}
-<li class="tags">
-{text:and tagged}
-{block:Tags}
-<a href="{TagURL}"><span class="label label-default radius">{Tag}</span></a>
-{/block:Tags}
-</li>
-{/block:HasTags}
-</ul>
-{block:PermalinkPage}
-{block:IfDisqusUsername}
-<hr />
-<div id="disqus">
-<div id="disqus_thread"></div>
-</div>
-<script type="text/javascript">
-                                                    var disqus_shortname = '{text:Disqus Username}';
-                                                    var disqus_url = '{Permalink}'; 
+    <footer>
+        <ul class="clearfix">
+            <li class="reblog">
+                {ReblogButton size="14"}
+            </li>
+            <li class="like">
+                <svg width="14" height="14" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <path d="M14.0425097,0.000920262799 C16.1435097,-0.0400797372 18.8835097,1.28192026 18.9635097,5.36992026 C19.0525097,9.95492026 15.1985097,13.3079203 9.48350967,16.2089203 C3.76650967,13.3079203 -0.0874903349,9.95492026 0.00150966509,5.36992026 C0.0815096651,1.28192026 2.82150967,-0.0400797372 4.92250967,0.000920262799 C7.02450967,0.0419202628 8.87050967,2.26592026 9.46950967,2.92792026 C10.0945097,2.26592026 11.9405097,0.0419202628 14.0425097,0.000920262799 Z"></path>
+                </svg>
+                {LikeButton size="14"}
+            </li>
+            <li class="pull-right">
+                <ul>
+                    <li class="date">
+                        <a href="{Permalink}">{TimeAgo}</a>{block:NoteCount},{/block:NoteCount}
+                    </li>
+                    {block:NoteCount}
+                    <li class="notes">
+                        {NoteCountWithLabel}
+                    </li>
+                    {/block:NoteCount}
+                    {block:ContentSource}
+                    <li class="source">
+                        (<a href="{SourceURL}">{lang:Source}</a>)
+                    </li>
+                    {/block:ContentSource}
+                    {block:RebloggedFrom}
+                    <li class="reblogged">
+                        {lang:Via} <a href="{ReblogParentURL}" target="_blank">{ReblogParentName}</a>
+                    </li>
+                    {/block:RebloggedFrom}
+                </ul>
+            </li>
+            {block:HasTags}
+            <li class="tags">
+                {text:and tagged}
+                {block:Tags}
+                <a href="{TagURL}"><span class="label label-default radius">{Tag}</span></a>
+                {/block:Tags}
+            </li>
+            {/block:HasTags}
+        </ul>
+        {block:PermalinkPage}
+        {block:IfDisqusUsername}
+        <hr />
+        <div id="disqus">
+            <div id="disqus_thread"></div>
+        </div>
+        <script type="text/javascript">
+            var disqus_shortname = '{text:Disqus Username}';
+            var disqus_url = '{Permalink}';
                                                 
-                                                    (function() {
-                                                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                                                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                                    })();
-                                                </script>
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
  {/block:IfDisqusUsername}
 {block:PostNotes}
 <div id="notes" class="post-notes clearfix">
@@ -657,6 +660,7 @@
 {/block:PermalinkPage}
 </footer>
 {/block:Date}
+
 </article>
 </div> 
 {/block:Posts}
