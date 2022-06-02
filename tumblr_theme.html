@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="utf-8">
- 
 
 {block:Description}
 <meta name="description" content="{MetaDescription}">
@@ -22,9 +21,9 @@
 
 {block:IndexPage}
 <meta property="og:title" content="
-{block:TagPage}&quot;{PlaintextTag}&quot; - {/block:TagPage}
-{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}
-{Title}
+{block:TagPage}&quot;
+{PlaintextTag}&quot;
+- {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{Title}
 " />
 <meta property="og:url" content="{blogURL}{block:TagPage}tagged/{URLSafeTag}{/block:TagPage}" />
 <meta property="og:type" content="blog" />
@@ -83,17 +82,6 @@
 " />
 <meta property="og:image" content="{PortraitURL-128}" />
 
-<! --  {Alt} is used to add a class of “odd” or “even”, depending if the line number is odd/even. -->
-<div class="chat">
-    <ul>
-        {block:Lines}
-        <li class="{Alt}">
-            {block:Label} {Label} {/block:Label}
-            {Line}
-        </li>
-        {/block:Lines}
-    </ul>
-</div>
 {/block:Chat}
 <! -- Probando -->
 
@@ -526,22 +514,26 @@
 </h2>
 </header>
 {/block:Title}
+
+<! -- <div class="post-content"> -->
+<! -- <ul> -->
+<! -- {block:Lines} -->
+<! -- <li class="{Alt} user-{UserNumber} radius"> {block:Label} -->
+<! -- <span class="user"> {Label} </span> {/block:Label}<span class="line"> {Line} -->
+<! -- </span></li> {/block:Lines} </ul></div> -->
+
+<! --  {Alt} is used to add a class of “odd” or “even”, depending if the line number is odd/even. -->
 <div class="post-content">
- <ul>
-{block:Lines}
-<li class="{Alt} user-{UserNumber} radius">
-{block:Label}
-<span class="user">
-{Label}
-</span>
-{/block:Label}
-<span class="line">
-{Line}
-</span>
-</li>
-{/block:Lines}
-</ul>
+    <ul>
+        {block:Lines}
+        <li class="{Alt}">
+            {block:Label} {Label} {/block:Label}
+            {Line}
+        </li>
+        {/block:Lines}
+    </ul>
 </div>
+
 {/block:Chat}
 {block:Audio}
 <header>
