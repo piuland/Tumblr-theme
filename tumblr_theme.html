@@ -32,7 +32,6 @@
 {/block:IndexPage}
 
 {block:PermalinkPage}
-
 <meta property="og:url" content="{Permalink}" />
 <meta property="og:type" content="article" />
 
@@ -286,11 +285,13 @@
 <link href="https://theme-hunter.tumblr.com/post/45018620458/making-tumblr-theme-chats-look-like-phone-messages" rel=phone_messages>
 <link href="https://www.tumblr.com/docs/es/custom_themes" rel=tumblr_doc>
 <link href="https://freyayuki.tumblr.com/post/128262588172/tumblr-tutorial-fix-chat-post-blog-homepage" rel=more_doc>
+<link href="https://www.w3schools.com/tags/tag_meta.asp" rel=meta_tag>
     
 </head>
 <body>
 
 {block:IfGoogleAnalyticsID}
+<! -- no aspiro a saber qué es esto la verdad -->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -302,218 +303,217 @@
 {/block:IfGoogleAnalyticsID}
 
 <header id="header">
-<div id="navbar">
-<div class="container">
-<nav class="navbar navbar-default" role="navigation">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle radius" data-toggle="collapse" data-target="#navbar-body">
-<i class="fa fa-bars fa-lg"></i>
-</button>
-<a class="navbar-brand" href="{BlogURL}">{BlogTitle}</a>
-</div>
-<div id="navbar-body" class="collapse navbar-collapse">
-<ul class="nav navbar-nav navbar-right">
-{block:HasPages}
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">{lang:Pages} <i class="fa fa-caret-down"></i></a>
-<ul class="dropdown-menu" role="menu">
-{block:Pages}
-<li><a href="{URL}">{Label}</a></li>
-{/block:Pages}
-</ul>
-</li>
-{/block:HasPages}
-{block:IfSortByTag}
-<li id="js-tags" class="sort-by dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <i class="fa fa-caret-down"></i></a>
-<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-</ul>
-</li>
-{/block:IfSortByTag}
-{block:SubmissionsEnabled}
-<li><a href="{BlogURL}submit">{SubmitLabel}</a></li>
-{/block:SubmissionsEnabled}
-{block:AskEnabled}
-<li><a href="{BlogURL}ask">{AskLabel}</a></li>
-{/block:AskEnabled}
-<li id="search" class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
-<ul class="dropdown-menu" role="menu">
-<li class="search">
-<form role="search" action="/search" method="get">
-<div class="input-group">
-<input type="text" class="form-control" name="q" value="{SearchQuery}" placeholder="{lang:Search}">
-<span class="input-group-btn">
-<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-</span>
-</div>
-</form>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
+    <div id="navbar">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle radius" data-toggle="collapse" data-target="#navbar-body">
+                        <i class="fa fa-bars fa-lg"></i>
+                    </button>
+                    <a class="navbar-brand" href="{BlogURL}">{BlogTitle}</a>
+                </div>
+                <div id="navbar-body" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {block:HasPages}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{lang:Pages} <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                {block:Pages}
+                                <li><a href="{URL}">{Label}</a></li>
+                                {/block:Pages}
+                            </ul>
+                        </li>
+                        {/block:HasPages}
+                        {block:IfSortByTag}
+                        <li id="js-tags" class="sort-by dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"></ul>
+                        </li>
+                        {/block:IfSortByTag}
+                        {block:SubmissionsEnabled}
+                        <li><a href="{BlogURL}submit">{SubmitLabel}</a></li>
+                        {/block:SubmissionsEnabled}
+                        {block:AskEnabled}
+                        <li><a href="{BlogURL}ask">{AskLabel}</a></li>
+                        {/block:AskEnabled}
+                        <li id="search" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="search">
+                                    <form role="search" action="/search" method="get">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="q" value="{SearchQuery}" placeholder="{lang:Search}">
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
 </header>
+
 <main id="main">
-<div class="container">
-<div class="row">
-<div class="col-xs-12">
-{block:IndexPage}
-<div class="blog-info">
-<div class="avatar">
-</div>
-{block:Description}
-<div class="description">
-{Description}
-</div>
-{/block:Description}
-</div>
-{/block:IndexPage}
-</div>
-{block:DayPage}
-<div class="col-xs-12">
-<article id="day" class="text-center">
-<header>
-<h2>
-{lang:Viewing everything posted on Month DayOfMonth Year}
-</h2>
-</header>
-</article>
-</div>
-{/block:DayPage}
-{block:SearchPage}
-<div class="col-xs-12">
-<article id="search" class="text-center">
-<header>
-<h2>
-{lang:Search results for SearchQuery 2}
-</h2>
-</header>
-{block:NoSearchResults}
-<div class="post-content">
-{lang:Sorry no search results found}
-</div>
-{/block:NoSearchResults}
-</article>
-</div>
-{/block:SearchPage}
-{block:Posts}
-<div class="wrapper col-xs-12">
-<article class="{PostType} ">
-{block:Text}
-{block:Title}
-<header>
-<h2>
-<a href="{Permalink}">
-{Title}
-</a>
-</h2>
-</header>
-{/block:Title}
-<div class="post-content">{Body}</div>
-{block:Text}
-{block:Photo}
-<header>
-{block:IndexPage}
-<a href="{PhotoURL-HighRes}" class="colorbox">
-<img class="img-responsive radius" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
-</a>
-{/block:IndexPage}
-{block:PermalinkPage}
-{LinkOpenTag}
-<img class="img-responsive radius" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
-{LinkCloseTag}
-{/block:PermalinkPage}
-</header>
-{block:Caption}
-<div class="post-content">
-<div class="caption">
-{Caption}
-</div>
-</div>
-{/block:Caption}
-{/block:Photo}
-{block:Panorama}
-<header>
-{LinkOpenTag}
-<img class="img-responsive" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
-{LinkCloseTag}
-</header>
-{block:Caption}
-<div class="post-content">
-<div class="caption">
-{Caption}
-</div>
-</div>
-{/block:Caption}
-{/block:Panorama}
-{block:Photoset}
-<header>
-<div id="photoset-{PostID}" class="photoset-layout radius invisible" data-layout="{PhotosetLayout}">
-{block:Photos}
-<img class="img-responsive" class="img-responsive" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
-{/block:Photos}
-</div>
-</header>
-{block:Caption}
-<div class="post-content">
-<div class="caption">
-{Caption}
-</div>
-</div>
-{/block:Caption}
-{/block:Photoset}
-{block:Quote}
-<header>
-<h2 class="text-center radius">
-&ldquo;{Quote}&rdquo;
-</h2>
-</header>
-{block:Source}
-<div class="post-content text-center">
-&mdash; {Source}
-</div>
-{/block:Source}
-{/block:Quote}
-{block:Link}
-<header class="radius">
-<h2>
-<a href="{URL}" target="_blank">
-{Name} <i class="fa fa-long-arrow-right"></i>
-</a>
-</h2>
-{block:Host}
-<div class="source">
-<a href="http://{Host}" target="_blank">
-{Host}
-</a>
-</div>
-{/block:Host}
-</header>
-{block:Excerpt}
-<div class="post-content">
-{Excerpt}
-</div>
-{/block:Excerpt}
-{block:Description}
-<div class="post-content">
-{Description}
-</div>
-{/block:Description}
-{/block:Link}
-{block:Chat}
-{block:Title}
-<header>
-<h2>
-<a href="{Permalink}">
-{Title}
-</a>
-</h2>
-</header>
-{/block:Title}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                {block:IndexPage}
+                <div class="blog-info">
+                    <div class="avatar">
+                    </div>
+                    {block:Description}
+                    <div class="description">
+                        {Description}
+                    </div>
+                    {/block:Description}
+                </div>
+                {/block:IndexPage}
+            </div>
+            {block:DayPage}
+            <div class="col-xs-12">
+                <article id="day" class="text-center">
+                    <header>
+                        <h2>
+                            {lang:Viewing everything posted on Month DayOfMonth Year}
+                        </h2>
+                    </header>
+                </article>
+            </div>
+            {/block:DayPage}
+            {block:SearchPage}
+            <div class="col-xs-12">
+                <article id="search" class="text-center">
+                    <header>
+                        <h2>
+                            {lang:Search results for SearchQuery 2}
+                        </h2>
+                    </header>
+                    {block:NoSearchResults}
+                    <div class="post-content">
+                        {lang:Sorry no search results found}
+                    </div>
+                    {/block:NoSearchResults}
+                </article>
+            </div>
+            {/block:SearchPage}
+            {block:Posts}
+            <div class="wrapper col-xs-12">
+                <article class="{PostType} ">
+                    {block:Text}
+                    {block:Title}
+                    <header>
+                        <h2>
+                            <a href="{Permalink}">
+                                {Title}
+                            </a>
+                        </h2>
+                    </header>
+                    {/block:Title}
+                    <div class="post-content">{Body}</div>
+                    {block:Text}
+                    {block:Photo}
+                    <header>
+                        {block:IndexPage}
+                        <a href="{PhotoURL-HighRes}" class="colorbox">
+                            <img class="img-responsive radius" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                        </a>
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                        {LinkOpenTag}
+                        <img class="img-responsive radius" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                        {LinkCloseTag}
+                        {/block:PermalinkPage}
+                    </header>
+                    {block:Caption}
+                    <div class="post-content">
+                        <div class="caption">
+                            {Caption}
+                        </div>
+                    </div>
+                    {/block:Caption}
+                    {/block:Photo}
+                    {block:Panorama}
+                    <header>
+                        {LinkOpenTag}
+                        <img class="img-responsive" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                        {LinkCloseTag}
+                    </header>
+                    {block:Caption}
+                    <div class="post-content">
+                        <div class="caption">
+                            {Caption}
+                        </div>
+                    </div>
+                    {/block:Caption}
+                    {/block:Panorama}
+                    {block:Photoset}
+                    <header>
+                        <div id="photoset-{PostID}" class="photoset-layout radius invisible" data-layout="{PhotosetLayout}">
+                            {block:Photos}
+                            <img class="img-responsive" class="img-responsive" src="{PhotoURL-HighRes}" data-at2x="{PhotoURL-HighRes}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                            {/block:Photos}
+                        </div>
+                    </header>
+                    {block:Caption}
+                    <div class="post-content">
+                        <div class="caption">
+                            {Caption}
+                        </div>
+                    </div>
+                    {/block:Caption}
+                    {/block:Photoset}
+                    {block:Quote}
+                    <header>
+                        <h2 class="text-center radius">
+                            &ldquo;{Quote}&rdquo;
+                        </h2>
+                    </header>
+                    {block:Source}
+                    <div class="post-content text-center">
+                        &mdash; {Source}
+                    </div>
+                    {/block:Source}
+                    {/block:Quote}
+                    {block:Link}
+                    <header class="radius">
+                        <h2>
+                            <a href="{URL}" target="_blank">
+                                {Name} <i class="fa fa-long-arrow-right"></i>
+                            </a>
+                        </h2>
+                        {block:Host}
+                        <div class="source"><a href="http://{Host}" target="_blank">
+                            {Host}
+                        </a>
+                    </div>
+                    {/block:Host}
+                </header>
+                {block:Excerpt}
+                <div class="post-content">
+                    {Excerpt}
+                </div>
+                {/block:Excerpt}
+                {block:Description}
+                <div class="post-content">
+                    {Description}
+                </div>
+                {/block:Description}
+                {/block:Link}
+                {block:Chat}
+                {block:Title}
+                <header>
+                    <h2>
+                    <a href="{Permalink}">
+                        {Title}
+                    </a>
+                    </h2>
+                </header>
+                {/block:Title}
 
 <! -- <div class="post-content"> -->
 <! -- <ul> -->
